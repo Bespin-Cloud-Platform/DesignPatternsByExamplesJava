@@ -92,6 +92,42 @@ public class View extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
+    public JButton getOkButton() {
+        return okButton;
+    }
+
+    public void setOkButton(JButton okButton) {
+        this.okButton = okButton;
+    }
+
+    public JTextField getNameField() {
+        return nameField;
+    }
+
+    public void setNameField(JTextField nameField) {
+        this.nameField = nameField;
+    }
+
+    public JPasswordField getPassField() {
+        return passField;
+    }
+
+    public void setPassField(JPasswordField passField) {
+        this.passField = passField;
+    }
+
+    public LoginListener getLoginListener() {
+        return loginListener;
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 

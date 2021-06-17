@@ -14,6 +14,22 @@ public class Controller implements LoginListener {
         this.model = model;
     }
 
+    public View getView() {
+        return view;
+    }
+
+    public void setView(View view) {
+        this.view = view;
+    }
+
+    public Model getModel() {
+        return model;
+    }
+
+    public void setModel(Model model) {
+        this.model = model;
+    }
+
     @Override
     public void loginPerformed(LoginFormEvent event) {
         System.out.println(String.format("Login event received: Name = %s; Password = %s", event.getName(), event.getPassword()));
