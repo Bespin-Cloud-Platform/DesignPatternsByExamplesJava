@@ -1,16 +1,29 @@
 package com.misacfd.designpatterns.buider;
 
+import java.util.Objects;
+
 public class Vehicle {
     private final String brand;
     private final int wheels;
     private final int doors;
     private final int maxSpeed;
 
-    private Vehicle(String brand, int wheels, int doors, int maxSpeed){
-        this.brand = brand;
-        this.wheels = wheels;
-        this.doors = doors;
-        this.maxSpeed = maxSpeed;
+    private Vehicle(Builder builder) {
+        this.brand = Objects.requireNonNull(builder.brand, "brand");
+        this.wheels = Objects.requireNonNull(builder.wheels, "wheels");
+        this.doors = Objects.requireNonNull(builder.doors, "doors");
+        this.maxSpeed = Objects.requireNonNull(builder.maxSpeed, "maxSpeed");
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public void display() {
+        System.out.println("brand = " + getBrand());
+        System.out.println("wheels = " + getWheels());
+        System.out.println("doors = " + getDoors());
+        System.out.println("maxSpeed = " + getMaxSpeed());
     }
 
     public String getBrand() {
@@ -29,49 +42,45 @@ public class Vehicle {
         return maxSpeed;
     }
 
-    public void display() {
-        System.out.println("brand = " + getBrand());
-        System.out.println("wheels = " + getWheels());
-        System.out.println("doors = " + getDoors());
-        System.out.println("maxSpeed = " + getMaxSpeed());
-    }
-
-    public static Builder builder() {
-        return new Builder();
-    }
-
     public static class Builder {
-
         private String brand;
-        private int wheels;
-        private int doors;
-        private int maxSpeed;
+        private Integer wheels;
+        private Integer doors;
+        private Integer maxSpeed;
 
         Builder() {
         }
 
-        public Builder brand(String brand) {
+        public Builder setBrand(String brand) {
             this.brand = brand;
             return this;
         }
 
-        public Builder wheels(int wheels) {
+        public Builder setWheels(int wheels) {
             this.wheels = wheels;
             return this;
         }
 
-        public Builder doors(int doors) {
+        public Builder setDoors(int doors) {
             this.doors = doors;
             return this;
         }
 
-        public Builder maxSpeed(int maxSpeed) {
+        public Builder setMaxSpeed(int maxSpeed) {
             this.maxSpeed = maxSpeed;
             return this;
         }
 
+        public Builder of(Vehicle vehicle) {
+            this.brand = vehicle.brand;
+            this.wheels = vehicle.wheels;
+            this.doors = vehicle.doors;
+            this.maxSpeed = vehicle.maxSpeed;
+            return this;
+        }
+
         public Vehicle build() {
-            return new Vehicle(brand, wheels, doors, maxSpeed);
+            return new Vehicle(this);
         }
     }
 }
