@@ -1,6 +1,6 @@
-package com.misacfd.designpatterns.demo1.view;
+package com.misacfd.designpatterns.observer.view;
 
-import com.misacfd.designpatterns.demo1.model.Model;
+import com.misacfd.designpatterns.observer.model.Model;
 
 import javax.swing.*;
 import java.awt.*;

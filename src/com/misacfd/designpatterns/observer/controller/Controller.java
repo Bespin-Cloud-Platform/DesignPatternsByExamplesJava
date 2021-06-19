@@ -1,7 +1,7 @@
-package com.misacfd.designpatterns.demo1.controller;
+package com.misacfd.designpatterns.observer.controller;
 
-import com.misacfd.designpatterns.demo1.model.Model;
-import com.misacfd.designpatterns.demo1.view.View;
+import com.misacfd.designpatterns.observer.model.Model;
+import com.misacfd.designpatterns.observer.view.View;
 
 public class Controller {
     private Model model;
