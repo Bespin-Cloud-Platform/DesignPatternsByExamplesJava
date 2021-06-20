@@ -43,9 +43,9 @@ public class Database {
 			throw new Exception("Driver not found");
 		}
 
-		String url = String.format("jdbc:mysql://localhost:%d/patterns", 3306);
+		String url = String.format("jdbc:mysql://localhost:%d/mysql", 3306);
 
-		con = DriverManager.getConnection(url, "squiffy", "letmein");
+		con = DriverManager.getConnection(url, "truong", "1234");
 	}
 	
 	public void disconnect() {
