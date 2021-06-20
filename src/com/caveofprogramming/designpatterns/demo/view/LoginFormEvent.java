@@ -1,4 +1,4 @@
-package com.caveofprogramming.designpatterns.observerexample.view;
+package com.caveofprogramming.designpatterns.demo.view;
 
 public class LoginFormEvent {
     private String name;

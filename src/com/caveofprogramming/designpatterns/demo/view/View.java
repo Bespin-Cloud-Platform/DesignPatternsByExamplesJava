@@ -1,4 +1,4 @@
-package com.caveofprogramming.designpatterns.observerexample.view;
+package com.caveofprogramming.designpatterns.demo.view;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -12,8 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-import com.caveofprogramming.designpatterns.observerexample.controller.Controller;
-import com.caveofprogramming.designpatterns.observerexample.model.Model;
+import com.caveofprogramming.designpatterns.demo.model.Model;
 
 public class View extends JFrame implements ActionListener {
 

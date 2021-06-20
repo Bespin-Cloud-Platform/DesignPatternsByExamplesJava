@@ -1,10 +1,10 @@
-package com.caveofprogramming.designpatterns.observerexample;
+package com.caveofprogramming.designpatterns.demo;
 
 import javax.swing.SwingUtilities;
 
-import com.caveofprogramming.designpatterns.observerexample.controller.Controller;
-import com.caveofprogramming.designpatterns.observerexample.model.Model;
-import com.caveofprogramming.designpatterns.observerexample.view.View;
+import com.caveofprogramming.designpatterns.demo.controller.Controller;
+import com.caveofprogramming.designpatterns.demo.model.Model;
+import com.caveofprogramming.designpatterns.demo.view.View;
 
 public class Application {
 

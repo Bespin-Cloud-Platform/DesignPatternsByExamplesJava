@@ -1,9 +1,9 @@
-package com.caveofprogramming.designpatterns.observerexample.controller;
+package com.caveofprogramming.designpatterns.demo.controller;
 
-import com.caveofprogramming.designpatterns.observerexample.model.Model;
-import com.caveofprogramming.designpatterns.observerexample.view.LoginFormEvent;
-import com.caveofprogramming.designpatterns.observerexample.view.LoginListener;
-import com.caveofprogramming.designpatterns.observerexample.view.View;
+import com.caveofprogramming.designpatterns.demo.model.Model;
+import com.caveofprogramming.designpatterns.demo.view.LoginFormEvent;
+import com.caveofprogramming.designpatterns.demo.view.LoginListener;
+import com.caveofprogramming.designpatterns.demo.view.View;
 
 public class Controller implements LoginListener {
     private View view;
