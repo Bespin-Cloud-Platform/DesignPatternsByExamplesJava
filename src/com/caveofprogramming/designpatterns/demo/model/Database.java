@@ -33,6 +33,11 @@ public class Database {
 	/*
 	 * Add whatever methods you like to your singleton class.
 	 */
+
+	public Connection getConnection() {
+		return con;
+	}
+
 	public void connect() throws Exception {
 		if (con != null)
 			return;
@@ -59,5 +64,5 @@ public class Database {
 		
 		con = null;
 	}
-	
+
 }
